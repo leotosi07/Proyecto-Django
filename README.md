@@ -1,8 +1,7 @@
 # Proyecto-Django
 Proyecto para las entregas parcial y final del curso de Python/Django de Coderhouse
 
-Pasos realizados durante el proyecto:
--Se hizo un repositorio y se trajo el gitignore y el readme.md de github
--Se creo el entorno virtual y se instalo django y sus dependencias
--Se inicio el proyecto "proyecto_django"
--Se creo la carpeta inicio
+Para probar, 
+1-presionar inicio para ver la pagina principal (se abre automaticamente igual si no se presiona)
+2-Carga tu mascota te lleva a la pagina para cargar los datos de la mascota, que son escenciales para crear una base de datos para una veterinaria.
+3-Al cargar un registro te lleva automaticamente a la ventana de busqueda, sino se puede acceder presionando Buscar tu mascota, colocando la letra busca por nombre de la mascota
