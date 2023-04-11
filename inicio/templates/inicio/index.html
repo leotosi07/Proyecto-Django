@@ -1,0 +1,67 @@
+
+{% extends 'genericos/base.html' %}
+{% load static %}
+
+{% block title_head %}
+<title>Veterinaria</title>
+{% endblock title_head %}
+{% block h1_header %}
+<h1>Bienvenidos a Veterinaria "Como perros y gatos"</h1>
+{% endblock h1_header %}
+
+
+
+{% block contenido %}
+<section class="features-icons bg-light text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                    <div class="features-icons-icon d-flex justify-content-center align-items-center"><img src={% static 'inicio/assets/dog.ico' %} alt="Icono 1" class="icon-img"></div>
+                    <h3>Responsabilidad</h3>
+                    <p class="lead mb-0">Recuerda siempre que tu mascota es tu responsabilidad, necesita cuidado, jugar, ser alimentado y mucha atencion!</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                    <div class="features-icons-icon d-flex justify-content-center align-items-center"><img src={% static 'inicio/assets/cat_food.ico' %} alt="Icono 2"class="icon-img"></div>
+                    <h3>Alimentacion</h3>
+                    <p class="lead mb-0">Tu mascota no puede comer cualquier cosa, necesita una alimentacion balanceada segun su tamaño y edad!</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                    <div class="features-icons-icon d-flex justify-content-center align-items-center"><img src={% static 'inicio/assets/doctor.ico' %} alt="Icono 3"class="icon-img"></div>
+                    <h3>Salud</h3>
+                    <p class="lead mb-0">Recuerda que ellos necesitan controles al igual que tu, es importante mantener a su mascota al día con sus vacunas para mantenerla sana y protegida.!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="showcase">
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+            <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url({% static 'inicio/assets/img/bg-showcase-1.jpg' %})"></div>
+            <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                <h2>Nuestro objetivo</h2>
+                <p class="lead mb-0">"En nuestra clínica veterinaria, estamos comprometidos con el bienestar integral de su querida mascota, brindándole cuidados médicos y atención compasiva para garantizar que tenga una vida saludable y feliz."</p>
+            </div>
+        </div>
+        <div class="row g-0">
+            <div class="col-lg-6 text-white showcase-img" style="background-image: url({% static 'inicio/assets/img/bg-showcase-2.jpg' %})"></div>
+            <div class="col-lg-6 my-auto showcase-text">
+                <h2>Prevencion</h2>
+                <p class="lead mb-0">"En nuestra clínica, creemos en la prevención como parte fundamental del cuidado de los animales, y promovemos la educación a los dueños sobre la importancia de la nutrición adecuada, la vacunación, la esterilización y la prevención de enfermedades para garantizar una vida larga y saludable para sus compañeros peludos."</p>
+            </div>
+        </div>
+        <div class="row g-0">
+            <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url({% static 'inicio/assets/img/bg-showcase-3.jpg' %})"></div>
+            <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                <h2>Medicina de vanguardia</h2>
+                <p class="lead mb-0">"Como profesionales de la salud animal, nos comprometemos a mantenernos actualizados con los avances en la medicina veterinaria y a utilizar equipos de vanguardia y técnicas innovadoras para ofrecer el mejor nivel de atención médica a su mascota, respaldado por nuestro amor y pasión por los animales."</p>
+            </div>
+        </div>
+    </div>
+
+{% endblock contenido %}
