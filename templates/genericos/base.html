@@ -23,10 +23,9 @@
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
                 <a class="navbar-brand" href={% url 'inicio:inicio' %}>Inicio</a>
-                <a class="navbar-brand" href={% url 'inicio:inicio' %}>Inicio</a>
-                <a class="navbar-brand" href={% url 'inicio:inicio' %}>Inicio</a>
-                <a class="navbar-brand" href={% url 'inicio:inicio' %}>Inicio</a>
-                <a class="navbar-brand" href={% url 'inicio:inicio' %}>Inicio</a>
+                <a class="navbar-brand" href={% url 'inicio:cargar_mascota' %}>Carga Tu Mascota</a>
+                <a class="navbar-brand" href={% url 'inicio:buscar_mascota' %}>Buscar Tu Mascota</a>
+
             </div>
         </nav>
         <!-- Masthead-->
@@ -49,7 +48,7 @@
         <!-- Footer-->
         <footer class="footer bg-light">
             <div class="container">
-                <div class="row">
+                <div class="row">   
                     <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
                         <ul class="list-inline mb-2">
                             <li class="list-inline-item"><a href="#!">About</a></li>
@@ -78,14 +77,5 @@
                 </div>
             </div>
         </footer>
-        <!-- Bootstrap core JS-->
-        <script src={% static 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js' %}></script>
-        <!-- Core theme JS-->
-        <script src={% static 'inicio/js/scripts.js' %}></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src={% static 'inicio/https://cdn.startbootstrap.com/sb-forms-latest.js' %}></script>
     </body>
 </html>

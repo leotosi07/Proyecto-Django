@@ -1,0 +1,78 @@
+{% extends 'genericos/base.html' %}
+
+{% block title_head %}
+<title>Mascotas</title>
+{% endblock title_head %}
+
+{% block h1_header %}
+<form action={% url 'inicio:buscar_mascota' %}>
+{{formulario}}
+<button>Buscar tu mascota por nombre</button>
+</form>
+{% endblock h1_header %}
+
+
+{% block contenido %}
+
+
+{% if mascotas %}
+<style>
+    /* Agrega bordes a la tabla */
+    table {
+      border-collapse: collapse;
+      border: 1px solid #000;
+      /* Define el ancho máximo de la tabla para centrarla */
+      max-width: 800px;
+      /* Centra la tabla en la hoja */
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    /* Define el espaciado entre columnas */
+    th, td {
+      padding: 10px;
+    }
+    
+    /* Alinea el texto a la izquierda en la primera columna */
+    th:first-child, td:first-child {
+      text-align: left;
+    }
+    
+    /* Centra el texto en las demás columnas */
+    th:not(:first-child), td:not(:first-child) {
+      text-align: center;
+    }
+  </style>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Registro</th>
+        <th>Nombre</th>
+        <th>Especie</th>
+        <th>Raza</th>
+        <th>Fecha de Nacimiento</th>
+        <th>Contacto Telefónico</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for mascota in mascotas %}
+      <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ mascota.nombre }}</td>
+        <td>{{ mascota.especie }}</td>
+        <td>{{ mascota.raza }}</td>
+        <td>{{ mascota.fecha_nacimiento }}</td>
+        <td>{{ mascota.contacto_telefonico }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  
+  
+  
+
+{% else %}
+    <h2>No hay datos sobre tu mascota.</h2>
+{% endif %}
+{% endblock contenido %}

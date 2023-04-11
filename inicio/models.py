@@ -2,7 +2,7 @@ from django.db import models
 from datetime import date
 
 
-class Animal(models.Model):
+class Mascota(models.Model):
     nombre = models.CharField(max_length=20)
     especie = models.CharField(max_length=20)
     raza = models.CharField(max_length=20)
