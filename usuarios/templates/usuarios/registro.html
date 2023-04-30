@@ -1,0 +1,33 @@
+
+{% extends 'genericos/base.html' %}
+{% load static %}
+
+{% block title_head %}
+<title>Registro</title>
+{% endblock title_head %}
+{% block h1_header %}
+<div style="display: flex; justify-content: center; align-items: center; height: 20vh;">
+    <div>
+      <h1 style="text-align: center;">Registrarse:</h1>
+
+{% if form.error %}
+<p>Los datos no son correctos</p>
+{% endif %}
+
+
+      <form action="{% url 'usuarios:registro' %}" method="POST" enctype='multipart/form-data' style="text-align: center;">
+        {% csrf_token %}
+        <table style="margin: 0 auto;">
+          {{form}}
+        </table>
+        <button style="margin-top: 10px;">Registrarse</button>
+      </form>
+    </div>
+  </div>
+{% endblock h1_header %}
+
+
+
+{% block contenido %}
+
+{% endblock contenido %}

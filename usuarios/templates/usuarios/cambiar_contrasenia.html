@@ -1,0 +1,24 @@
+
+{% extends 'genericos/base.html' %}
+{% load static %}
+
+{% block title_head %}
+<title>Cambiar Contrasenia</title>
+{% endblock title_head %}
+{% block h1_header %}
+<h1>Cambiar Contrasenia</h1>
+{% if form.error %}
+<p>Formulario invalido</p>
+{% endif %}
+<form action={% url 'usuarios:cambiar_contrasenia' %} method="post">
+    {% csrf_token %}
+    {{form}}
+    <button>Cambiar</button>
+    </form>
+{% endblock h1_header %}
+
+
+
+{% block contenido %}
+
+{% endblock contenido %}

@@ -1,0 +1,24 @@
+
+{% extends 'genericos/base.html' %}
+{% load static %}
+
+{% block title_head %}
+<title>Login</title>
+{% endblock title_head %}
+{% block h1_header %}
+<h1>Login</h1>
+{% if form.error %}
+<p>Datos Erroneos</p>
+{% endif %}
+<form action={% url 'usuarios:login' %} method="post">
+    {% csrf_token %}
+    {{form}}
+    <button>Logearse</button>
+    </form>
+{% endblock h1_header %}
+
+
+
+{% block contenido %}
+
+{% endblock contenido %}
