@@ -47,10 +47,6 @@ class AnimalUpdateView(UpdateView):
 class AnimalDeleteView(DeleteView):
     model = Animal
     template_name = "ventas/borrar_animales.html"
-
-class AnimalDetailView(DetailView):
-    model = Animal
-    template_name = "ventas/detalle_animales.html"
     
 class CategoriaListView(ListView):
     model = Categoria
@@ -68,10 +64,6 @@ class CategoriaDeleteView(DeleteView):
     model = Categoria
     template_name = "ventas/borrar_categorias.html"
 
-class CategoriaDetailView(DetailView):
-    model = Categoria
-    template_name = "ventas/detalle_categorias.html"
-    
 class TipoListView(ListView):
     model = Tipo
     template_name = "ventas/lista_tipos.html"
@@ -88,10 +80,6 @@ class TipoDeleteView(DeleteView):
     model = Tipo
     template_name = "ventas/borrar_tipos.html"
 
-class TipoDetailView(DetailView):
-    model = Tipo
-    template_name = "ventas/detalle_tipos.html"
-    
 class ComentarioListView(ListView):
     model = Comentario
     template_name = "ventas/lista_comentarios.html"
@@ -111,7 +99,7 @@ class ComentarioDeleteView(DeleteView):
 class ComentarioDetailView(DetailView):
     model = Comentario
     template_name = "ventas/detalle_comentarios.html"
-    
+
 def agregar_al_carrito(request, producto_id):
     producto = get_object_or_404(Producto, id=producto_id)
     carrito, creado = Carrito.objects.get_or_create(usuario=request.user)

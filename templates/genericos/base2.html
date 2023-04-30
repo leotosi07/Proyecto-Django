@@ -3,7 +3,13 @@
   {% load static %}
 <head>
   <meta charset="UTF-8">
-  <title>Tienda en línea</title>
+
+  <title>
+    {% block Title %}
+    Tienda en línea  
+    {% endblock Title %}
+  </title>
+
   <meta name="description" content="Bienvenido a nuestra tienda en línea">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href={% static 'inicio/assets/favicon.ico' %} />
@@ -114,10 +120,13 @@
       </nav>
 <body>
   <header>
+    {% block header %}
     <h1>Tienda en línea</h1>
+    {% endblock header %}
   </header>
-  {% block bodynav %}
+
   <nav>
+    {% block bodynav %}
     <ul>
       <li><a href="#">Inicio</a></li>
       <li><a href="#">Categoría 1</a></li>
@@ -125,8 +134,9 @@
       <li><a href="#">Categoría 3</a></li>
       <li><a href="#">Categoría 4</a></li>
     </ul>
+    {% endblock bodynav %}
   </nav>
-  {% endblock bodynav %}
+
 <main>
 {% block main %}
 {% endblock main %}
