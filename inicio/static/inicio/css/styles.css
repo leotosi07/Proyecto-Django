@@ -10921,3 +10921,9 @@ footer.footer {
   width: 90px; /* ajusta el ancho según tus necesidades */
   height: auto; /* ajusta la altura según tus necesidades */
 }
+
+.cart {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
