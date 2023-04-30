@@ -23,8 +23,6 @@ def cargar_mascota (request):
                 especie=datos_correctos['especie'],
                 raza = datos_correctos['raza'], 
                 fecha_nacimiento = datos_correctos['fecha_nacimiento'], 
-                propietario = datos_correctos['propietario'], 
-                contacto_telefonico = datos_correctos['contacto_telefonico'], 
                 )
             mascota.save()
 

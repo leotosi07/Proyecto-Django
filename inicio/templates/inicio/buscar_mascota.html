@@ -5,10 +5,17 @@
 {% endblock title_head %}
 
 {% block h1_header %}
-<form action={% url 'inicio:buscar_mascota' %}>
-{{formulario}}
-<button>Buscar tu mascota por nombre</button>
-</form>
+
+<div style="display: flex; justify-content: center; align-items: center; height: 20vh;">
+  <div>
+    <h1 style="text-align: center;">Carga a tu mascota:</h1>
+    <form action="{% url 'inicio:cargar_mascota' %}" method="POST" style="text-align: center;">
+      {% csrf_token %}
+      <button style="margin-top: 10px;">Cargar</button>
+    </form>
+  </div>
+</div>
+
 {% endblock h1_header %}
 
 
@@ -46,6 +53,9 @@
   
   <table>
     <thead>
+      <form action={% url 'inicio:buscar_mascota' %}>
+        {{formulario}}
+        </form>
       <tr>
         <th>Registro</th>
         <th>Nombre</th>
@@ -63,7 +73,8 @@
         <td>{{ mascota.especie }}</td>
         <td>{{ mascota.raza }}</td>
         <td>{{ mascota.fecha_nacimiento }}</td>
-
+        <td>{{ mascota.propietario }}</td>
+        <td>{{ mascota.contacto_telefonico }}</td>
       </tr>
       {% endfor %}
     </tbody>
