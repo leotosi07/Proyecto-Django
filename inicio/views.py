@@ -1,5 +1,3 @@
-from django.shortcuts import render
-from django.template import Template, Context, loader
 from django.shortcuts import render, redirect
 from inicio.forms import CreacionMascotaForm,BuscarMascota
 from inicio.models import Mascota
@@ -10,6 +8,7 @@ def inicio (request):
 
 def buscar_mascota (request):
     return render (request,'inicio/buscar_mascota.html')
+
 
 def cargar_mascota (request):
     if request.method == "POST":
@@ -42,4 +41,3 @@ def buscar_mascota(request):
     formulario_busqueda = BuscarMascota()
     
     return render(request, 'inicio/buscar_mascota.html', {'mascotas': mascotas, 'formulario': formulario_busqueda})
-
