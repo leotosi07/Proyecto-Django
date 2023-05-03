@@ -6,7 +6,7 @@ from django.shortcuts import get_object_or_404, redirect
 from django.contrib import messages
 from django.contrib.auth.models import User
 
-from ventas.models import Producto,Animal,Categoria,Tipo,Comentario,ItemDeCarrito,Carrito
+from ventas.models import Producto,Animal,Categoria,Tipo,Comentario
 
 
 def index (request):
@@ -100,19 +100,5 @@ class ComentarioDetailView(DetailView):
     model = Comentario
     template_name = "ventas/detalle_comentarios.html"
 
-def agregar_al_carrito(request, producto_id):
-    producto = get_object_or_404(Producto, id=producto_id)
-    carrito, creado = Carrito.objects.get_or_create(usuario=request.user)
-    item, creado = ItemDeCarrito.objects.get_or_create(producto=producto, carrito=carrito)
-    if not creado:
-        item.cantidad += 1
-        item.save()
-    return redirect('carrito')
 
-def ver_carrito(request):
-    carrito = Carrito.objects.filter(usuario=request.user).first()
-    items = ItemDeCarrito.objects.filter(carrito=carrito)
-    total = sum([item.producto.precio * item.cantidad for item in items])
-    context = {'items': items, 'total': total}
-    return render(request, 'carrito.html', context)
 
